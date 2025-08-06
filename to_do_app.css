@@ -1,0 +1,147 @@
+/* Task List Styles */
+
+ul#taskList {
+  width: 30%;
+  margin: 40px auto 0 auto;
+  padding: 0;
+  list-style: none;
+  
+  border-radius: 20px;
+  box-shadow: 0 4px 24px 0 rgba(7,47,75,0.15);
+  opacity: 0;
+  transition: opacity 0.7s;
+}
+
+ul#taskList.visible {
+  opacity: 1;
+}
+
+ul#taskList li {
+  color: #fff;
+  background: linear-gradient(90deg, #335dd1ff 0%, #61c5dfff 100%);
+  margin: 12px 18px;
+  padding: 12px 18px;
+  border-radius: 12px;
+  font-size: 1.1em;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: background 0.3s, color 0.3s;
+}
+body {
+    
+  background: linear-gradient(to bottom right, #87ceeb, #00008b);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+}
+
+h1 {
+    text-align: center;
+    color: #072f4b;
+    margin-top: 20px;
+    font-size: 90px;
+}
+
+input[type="text"] {
+    position: relative;
+    width: 22%;
+    padding: 10px;
+    margin: 180px auto;
+    background-color: #9ad1e7e3;
+    color: #052c3b;
+    display: block;
+    border: 2px solid #0e3755;
+    border-radius: 40px;
+    font-size: 20px;
+}
+
+
+/* Custom CheckBox Controls (from Uiverse.io by WhiteNervosa) */
+.customCheckBoxHolder {
+  margin: 30px 0 20px 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* From Uiverse.io by WhiteNervosa */ 
+.customCheckBoxHolder {
+  margin: 5px;
+  display: flex;
+}
+
+.customCheckBox {
+  width: fit-content;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  user-select: none;
+  padding: 2px 8px;
+  background-color: #072f4b;
+  color: #fff;
+  border-radius: 0px;
+  color: rgba(255, 255, 255, 0.7);
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 300ms;
+  transition-property: color, background-color, box-shadow;
+  display: flex;
+  height: 32px;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 1px 0px inset, rgba(255, 255, 255, 0.17) 0px 1px 1px 0px;
+  outline: none;
+  justify-content: center;
+  min-width: 55px;
+}
+
+.customCheckBox:hover {
+  background-color: #0e3755;
+  color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.23) 0px -4px 1px 0px inset, rgba(255, 255, 255, 0.17) 0px -1px 1px 0px, rgba(0, 0, 0, 0.17) 0px 2px 4px 1px;
+}
+
+.customCheckBox .inner {
+  font-size: 18px;
+  font-weight: 900;
+  pointer-events: none;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 300ms;
+  transition-property: transform;
+  transform: translateY(0px);
+}
+
+.customCheckBox:hover .inner {
+  transform: translateY(-2px);
+}
+
+.customCheckBoxWrapper:first-of-type .customCheckBox {
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+  border-right: 0px;
+}
+
+.customCheckBoxWrapper:last-of-type .customCheckBox {
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+  border-left: 0px;
+}
+
+.customCheckBoxInput {
+  display: none;
+}
+
+.customCheckBoxInput:checked + .customCheckBoxWrapper .customCheckBox {
+  background-color: #0e3755;
+  color: #fff;
+  box-shadow: rgba(24, 96, 190, 0.23) 0px -4px 1px 0px inset, rgba(255, 255, 255, 0.17) 0px -1px 1px 0px, rgba(15, 83, 161, 0.17) 0px 2px 4px 1px;
+}
+
+.customCheckBoxInput:checked + .customCheckBoxWrapper .customCheckBox .inner {
+  transform: translateY(-2px);
+}
+
+.customCheckBoxInput:checked + .customCheckBoxWrapper .customCheckBox:hover {
+  background-color: #335dd1;
+  box-shadow: rgba(0, 0, 0, 0.26) 0px -4px 1px 0px inset, rgba(255, 255, 255, 0.17) 0px -1px 1px 0px, rgba(0, 0, 0, 0.15) 0px 3px 6px 2px;
+}
+
+.customCheckBoxWrapper .customCheckBox:hover .inner {
+  transform: translateY(-2px);
+}
